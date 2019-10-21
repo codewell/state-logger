@@ -1,5 +1,5 @@
 const consoleStyling = require('./consoleStyling');
-const defaulStyling = require('./defaultStyling');
+const defaultStyling = require('./defaultStyling');
 
 /**
  * Log the current state to the terminal
@@ -7,8 +7,8 @@ const defaulStyling = require('./defaultStyling');
  * @param {object} action - {type, payload}
  * @param {object} nextState - Updated redux / react context state
  */
-const stateLogger = (state, action, nextState, styling = defaulStyling) => {
-  const styling = { ...defaulStyling, ...styling };
+const stateLogger = (state, action, nextState, customStyling = {}) => {
+  const styling = { ...defaultStyling, ...customStyling };
   console.log('%c Previous state:', consoleStyling(styling.state));
   console.log(state);
   console.log('%c --------------------------------------', consoleStyling(styling.state));
