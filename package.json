@@ -1,6 +1,6 @@
 {
   "name": "@codewell/state-logger",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Log JavaScript states and actions",
   "main": "src/index.js",
   "scripts": {
