@@ -18,4 +18,4 @@ const defaulStyling = Object.freeze({
   },
 });
 
-module.exports = defaulStyling;
+export default defaulStyling;
