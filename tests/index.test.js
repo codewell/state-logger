@@ -1,26 +1,15 @@
-const dev = require('../lib/dev');
-const prod = require('../lib/prod')
-
+const lib = require("../lib/index.js");
 
 const state = {};
 const nextState = {};
 const action = {
-  type: 'ACTION_TYPE',
-  payload: 'payload'
-}
+  type: "ACTION_TYPE",
+  payload: "payload",
+};
 
 // Development version
-test('Dev logs', () => {
+test("Logs", () => {
   console.log = jest.fn();
-  process.env.NODE_ENV = 'development';
-  dev(state, action, nextState);
+  lib(state, action, nextState);
   expect(console.log).toHaveBeenCalledTimes(10);
-});
-
-// Production version
-test('Prod does not log', () => {
-  console.log = jest.fn();
-  process.env.NODE_ENV = 'production';
-  prod(state, action, nextState);
-  expect(console.log).toHaveBeenCalledTimes(0);
 });

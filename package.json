@@ -6,10 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "rollup --config",
-    "release": "npm run build:dev && npm run build:prod",
-    "build:prod": "NODE_ENV=production rollup -c",
-    "build:dev": "NODE_ENV=development rollup -c",
-    "dry-release": "npm run release && npm pack"
+    "dry-release": "npm run build && npm pack",
+    "format": "prettier \"**/*.{js,md}\" --write"
   },
   "repository": {
     "type": "git",
@@ -26,14 +24,12 @@
   },
   "homepage": "https://github.com/codewell/state-logger#readme",
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "@rollup/plugin-replace": "^2.3.3",
-    "jest": "^26.0.1",
-    "rollup": "^1.32.1",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.2"
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^18.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "jest": "^26.5.0",
+    "prettier": "^2.2.1"
   }
 }
