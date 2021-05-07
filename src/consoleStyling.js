@@ -6,9 +6,9 @@
  */
 const consoleStyling = ({ color, fontFamily }) => `
 color: ${color}; 
-font-weight: 900; 
-font-family: ${fontFamily}, monospace; 
-font-style: italic; 
-font-size: 1rem`;
+font-weight: 900;
+font-family: ${fontFamily}, monospace;
+font-style: italic;
+font-size: 1rem;`;
 
 export default consoleStyling;

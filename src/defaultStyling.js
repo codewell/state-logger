@@ -1,7 +1,7 @@
-const DEFAULT_FONT = 'Dank Mono';
-const GREEN = '#27ae60';
-const BLUE = '#2980b9';
-const YELLOW = '#f39c12';
+const DEFAULT_FONT = "Dank Mono";
+const GREEN = "#27ae60";
+const BLUE = "#2980b9";
+const YELLOW = "#f39c12";
 
 const defaulStyling = Object.freeze({
   state: {
